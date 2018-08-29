@@ -6,7 +6,7 @@ $url = 'https://1001ebooks.com';
 $xml = simplexml_load_file($url . '/feed/', 'SimpleXMLElement', LIBXML_NOCDATA);
 
 $transliterator = Transliterator::createFromRules(
-    "[^[:L:][:N:].]+ > '-';"    // Remplace tout ce qui n'est pas une lettre, un chiffre ou un point par un tiret
+    "[^[:L:][:N:].]+ > '-';"    // Remplacer tout ce qui n'est pas une lettre, un chiffre ou un point par un tiret
 );
 
 foreach ($xml->channel->item as $item) {
